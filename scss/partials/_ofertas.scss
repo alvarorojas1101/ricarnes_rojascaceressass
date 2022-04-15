@@ -1,0 +1,31 @@
+/*----------------ofertas-----------------*/
+
+.ofertas_row {
+    @include flex(flex, space-evenly, wrap, row, 40px);
+
+    .ofertas_col {
+        padding: 20px;
+        padding-bottom: 40px;
+        text-align: center;
+
+        &:hover {
+            box-shadow: 2px 2px 4px 1px $primary-color;
+        }
+
+        .img_oferta {
+            width: 300px;
+            height: 200px;
+            transition: all 0.1s linear;
+        }
+    }
+}
+
+
+
+
+.filtrar {
+    text-align: left;
+    padding: 20px;
+    background-color: $secundary-color;
+
+}

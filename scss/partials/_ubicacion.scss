@@ -1,0 +1,19 @@
+/*-----------------ubicacion-------------------*/
+
+.ubicacion {
+    text-align: center;
+    padding: 70px 70px 70px 70px;
+
+    .ubicacion_map {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+}
+
+.ubicacion_video {
+    padding: 50px 10px 70px 10px;
+    text-align: center;
+    background-color: $secundary-color;
+}

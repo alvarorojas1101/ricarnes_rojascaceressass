@@ -1,0 +1,297 @@
+/*---------------variables---------------------*/
+/*---------------reseteo_codigo---------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none; }
+
+/*---------------globales---------------------*/
+a {
+  font-size: 35px;
+  margin-left: 30px;
+  margin-right: 30px;
+  color: #000;
+  text-decoration: none; }
+
+h1 {
+  color: white; }
+
+h2 {
+  color: white; }
+
+p {
+  color: white; }
+
+/*---------------mapas---------------------*/
+/*---------------extend---------------------*/
+.galeria .res, .galeria .pollo, .galeria .porcina, .galeria .pescado {
+  display: grid;
+  grid-gap: 30px;
+  grid-auto-rows: 200px;
+  grid-template-columns: 1fr 1fr 1fr; }
+
+/*---------------mixin---------------------*/
+/*----------------mediaQuerys-------------------*/
+@media screen and (max-width: 501px) {
+  .galeria .res {
+    padding-bottom: 50px; }
+  .pollo {
+    grid-template-columns: 100%; }
+  .porcina {
+    grid-template-columns: 100%; }
+  .pescado {
+    grid-template-columns: 100%; }
+  .img_footer {
+    width: 90%; }
+  .img_footer_redes {
+    width: 40px;
+    height: 40px; }
+  .header_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .logo_img {
+    width: 150px;
+    padding: 25px 15px 15px 15px; }
+  .search input[type=text] {
+    width: 200px;
+    text-align: center; }
+  .header_nav_search {
+    justify-content: center; }
+  .ofertas_row {
+    padding: 35px !important; }
+  .contacto_form {
+    padding: 0 !important;
+    width: 100%;
+    height: 100%; }
+  .ubicacion {
+    padding: 0 !important; }
+  .main_productos {
+    padding: 0;
+    padding-top: 10px; }
+  .index_col {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-right: 20px;
+    padding-left: 20px; }
+  .index_row {
+    --bs-gutter-x: 0;
+    margin: 0; }
+  .img_oferta {
+    width: 100% !important; }
+  .galeria {
+    padding: 0 0 0 0; } }
+
+@media screen and (max-width: 1000px) {
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    justify-content: center;
+    padding-left: 0px; }
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    justify-content: center;
+    padding-left: 0px; }
+  .pago {
+    justify-content: space-around;
+    width: 100%;
+    justify-content: center; }
+  a {
+    font-size: 30px;
+    margin-left: 30px;
+    margin-right: 30px; }
+  .ofertas_row {
+    flex-direction: column; } }
+
+/*------------------index-----------------*/
+header {
+  background-color: #ff9800;
+  border: 1px solid white; }
+  header .header_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    header .header_nav .navbar {
+      padding: 0;
+      --bs-bg-opacity: 0; }
+  header .logo_img {
+    width: 200px;
+    padding: 15px 15px 15px 30px; }
+  header .container-fluid {
+    background-color: #ff9800; }
+    header .container-fluid .form_nav {
+      padding: 10px; }
+  header ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-left: 0rem;
+    padding: 10px; }
+    header ul .ul_nav {
+      width: 100%; }
+      header ul .ul_nav .navbar {
+        --bs-bg-opacity: 0; }
+    header ul .a_nav:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 10px 10px 10px 10px;
+      color: #ff9800; }
+
+main {
+  background-color: black;
+  padding: 30px; }
+  main .index_row {
+    width: 100%;
+    height: 100%; }
+    main .index_row .index_col {
+      width: 450px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 40px; }
+      main .index_row .index_col .card_img {
+        width: 100%;
+        height: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px; }
+        main .index_row .index_col .card_img .card_imagen {
+          width: 100%;
+          height: 100%; }
+      main .index_row .index_col .card_texto {
+        width: 100%;
+        height: 50%;
+        text-align: justify;
+        padding-top: 10px; }
+
+.index_video {
+  padding: 70px 10px 70px 10px;
+  text-align: center;
+  background-color: #ffc340; }
+
+.footer {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: #ff9800;
+  justify-content: space-evenly; }
+  .footer .pago {
+    padding: 15px;
+    background-color: #ff9800; }
+    .footer .pago .img_footer {
+      padding-top: 10px; }
+      .footer .pago .img_footer:hover {
+        transform: scale(1.1, 1.1); }
+  .footer .container_footer {
+    padding: 15px;
+    background-color: #ff9800; }
+    .footer .container_footer .img_footer_redes {
+      height: 40px; }
+      .footer .container_footer .img_footer_redes:hover {
+        transform: translate(-2px, -2px); }
+
+/*----------------ofertas-----------------*/
+.ofertas_row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 40px; }
+  .ofertas_row .ofertas_col {
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center; }
+    .ofertas_row .ofertas_col:hover {
+      box-shadow: 2px 2px 4px 1px #ff9800; }
+    .ofertas_row .ofertas_col .img_oferta {
+      width: 300px;
+      height: 200px;
+      transition: all 0.1s linear; }
+
+.filtrar {
+  text-align: left;
+  padding: 20px;
+  background-color: #ffc340; }
+
+/*---------------galeria---------------------*/
+.galeria {
+  padding: 0; }
+  .galeria .res {
+    padding-top: 40px;
+    padding-bottom: 50px; }
+    .galeria .res .res_a {
+      grid-column: 2 span; }
+    .galeria .res .res_e {
+      grid-row: 2 span; }
+  .galeria .pollo {
+    padding-top: 40px;
+    padding-bottom: 50px; }
+    .galeria .pollo .pollo_d {
+      grid-column: 2 span; }
+    .galeria .pollo .pollo_c {
+      grid-row: 2 span; }
+  .galeria .porcina {
+    padding-top: 40px;
+    padding-bottom: 50px; }
+    .galeria .porcina .porcina_g {
+      grid-column: 2 span; }
+    .galeria .porcina .porcina_a {
+      grid-row: 2 span; }
+  .galeria .pescado {
+    padding-top: 40px; }
+    .galeria .pescado .pescado_f {
+      grid-column: 2 span; }
+    .galeria .pescado .pescado_b {
+      grid-row: 2 span; }
+  .galeria .galeria_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+    .galeria .galeria_img:hover {
+      transform: scale(1.1, 1.1); }
+
+/*-----------------ubicacion-------------------*/
+.ubicacion {
+  text-align: center;
+  padding: 70px 70px 70px 70px; }
+  .ubicacion .ubicacion_map {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center; }
+
+.ubicacion_video {
+  padding: 50px 10px 70px 10px;
+  text-align: center;
+  background-color: #ffc340; }
+
+/*----------------contacto-------------------*/
+.contacto {
+  text-align: right;
+  padding: 20px;
+  background-color: #ffc340; }
+
+.contacto_form {
+  padding: 70px 70px 70px 70px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; }
+  .contacto_form .form-check {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+  .contacto_form .input_enviar {
+    display: flex;
+    justify-content: center; }

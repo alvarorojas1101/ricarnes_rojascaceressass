@@ -1,0 +1,30 @@
+/*----------------contacto-------------------*/
+
+.contacto {
+    text-align: right;
+    padding: 20px;
+    background-color: $secundary-color;
+}
+
+.contacto_form {
+
+    padding: 70px 70px 70px 70px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $font-color;
+
+    .form-check {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .input_enviar {
+        display: flex;
+        justify-content: center;
+    }
+
+}

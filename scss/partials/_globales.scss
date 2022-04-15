@@ -1,0 +1,63 @@
+/*---------------variables---------------------*/
+
+$primary-color: #ff9800;
+$secundary-color: #ffc340;
+$font-color: white;
+
+/*---------------reseteo_codigo---------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+/*---------------globales---------------------*/
+a {
+    font-size: 35px;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: #000;
+    text-decoration: none;
+}
+
+h1 {
+    color: $font-color;
+}
+
+h2 {
+    color: $font-color;
+}
+
+p {
+    color: $font-color;
+}
+
+/*---------------mapas---------------------*/
+
+$display: (display: flex,
+    flex-wrap: wrap,
+);
+
+
+/*---------------extend---------------------*/
+
+%grid {
+    display: grid;
+    grid-gap: 30px;
+    grid-auto-rows: 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/*---------------mixin---------------------*/
+
+@mixin flex ($display, $horizontal, $line, $direction, $padding) {
+    display: $display;
+    justify-content: $horizontal;
+    flex-wrap: $line;
+    flex-direction: $direction;
+    padding: $padding;
+}
