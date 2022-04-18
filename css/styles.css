@@ -60,8 +60,6 @@ p {
     text-align: center; }
   .header_nav_search {
     justify-content: center; }
-  .ofertas_row {
-    padding: 35px !important; }
   .contacto_form {
     padding: 0 !important;
     width: 100%;
@@ -85,7 +83,10 @@ p {
   .img_oferta {
     width: 100% !important; }
   .galeria {
-    padding: 0 0 0 0; } }
+    padding: 0 0 0 0; }
+  .ofertas_row {
+    display: flex;
+    flex-wrap: wrap; } }
 
 @media screen and (max-width: 1000px) {
   .productos {
