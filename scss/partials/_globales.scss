@@ -16,38 +16,55 @@ $font-color: white;
 
 /*---------------globales---------------------*/
 a {
-    font-size: 35px;
-    margin-left: 30px;
-    margin-right: 30px;
+    font-size: 2em;
     color: #000;
     text-decoration: none;
 }
 
 h1 {
     color: $font-color;
+    text-transform: capitalize;
+    padding-left: 0.5em;
 }
 
 h2 {
     color: $font-color;
+    text-transform: capitalize;
 }
 
+h3{
+   color: $font-color;
+   text-transform: uppercase;
+}
+
+h4{
+    color: #000;
+    margin-bottom: 0;
+    padding: 0.6em;
+    text-transform: capitalize;
+}
 p {
+    color: $font-color;
+    text-transform: capitalize;
+}
+
+label{
     color: $font-color;
 }
 
+main{
+    background-color: black;
+}
 /*---------------mapas---------------------*/
 
-$display: (display: flex,
-    flex-wrap: wrap,
-);
-
+$display: (display: flex,flex-wrap: wrap,);
 
 /*---------------extend---------------------*/
 
 %grid {
     display: grid;
-    grid-gap: 30px;
-    grid-auto-rows: 200px;
+    grid-gap: 1.2em;
+    grid-auto-rows: 12.5em;
     grid-template-columns: 1fr 1fr 1fr;
 }
 

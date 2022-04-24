@@ -9,34 +9,50 @@
 
 /*---------------globales---------------------*/
 a {
-  font-size: 35px;
-  margin-left: 30px;
-  margin-right: 30px;
+  font-size: 2em;
   color: #000;
   text-decoration: none; }
 
 h1 {
-  color: white; }
+  color: white;
+  text-transform: capitalize;
+  padding-left: 0.5em; }
 
 h2 {
-  color: white; }
+  color: white;
+  text-transform: capitalize; }
+
+h3 {
+  color: white;
+  text-transform: uppercase; }
+
+h4 {
+  color: #000;
+  margin-bottom: 0;
+  padding: 0.6em;
+  text-transform: capitalize; }
 
 p {
+  color: white;
+  text-transform: capitalize; }
+
+label {
   color: white; }
+
+main {
+  background-color: black; }
 
 /*---------------mapas---------------------*/
 /*---------------extend---------------------*/
 .galeria .res, .galeria .pollo, .galeria .porcina, .galeria .pescado {
   display: grid;
-  grid-gap: 30px;
-  grid-auto-rows: 200px;
+  grid-gap: 1.2em;
+  grid-auto-rows: 12.5em;
   grid-template-columns: 1fr 1fr 1fr; }
 
 /*---------------mixin---------------------*/
 /*----------------mediaQuerys-------------------*/
 @media screen and (max-width: 501px) {
-  .galeria .res {
-    padding-bottom: 50px; }
   .pollo {
     grid-template-columns: 100%; }
   .porcina {
@@ -46,47 +62,38 @@ p {
   .img_footer {
     width: 90%; }
   .img_footer_redes {
-    width: 40px;
-    height: 40px; }
+    width: 1.7em;
+    height: 1.7em; }
   .header_nav {
     display: flex;
     flex-direction: column;
     align-items: center; }
   .logo_img {
-    width: 150px;
-    padding: 25px 15px 15px 15px; }
+    width: 3.3em !important;
+    padding: 0.3em 0 0 0 !important; }
   .search input[type=text] {
-    width: 200px;
+    width: 12.5em;
     text-align: center; }
   .header_nav_search {
     justify-content: center; }
+  .navbar-toggler {
+    padding: .05rem .05rem;
+    font-size: 0.90rem; }
   .contacto_form {
     padding: 0 !important;
     width: 100%;
     height: 100%; }
   .ubicacion {
     padding: 0 !important; }
-  .main_productos {
-    padding: 0;
-    padding-top: 10px; }
-  .index_col {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding-right: 20px;
-    padding-left: 20px; }
-  .index_row {
-    --bs-gutter-x: 0;
-    margin: 0; }
+  .main_productos .container {
+    width: 90% !important; }
   .img_oferta {
-    width: 100% !important; }
+    width: 100% !important;
+    height: 40% !important; }
   .galeria {
     padding: 0 0 0 0; }
-  .ofertas_row {
-    display: flex;
-    flex-wrap: wrap; } }
+  h1 {
+    padding-left: 0; } }
 
 @media screen and (max-width: 1000px) {
   .productos {
@@ -108,73 +115,71 @@ p {
     width: 100%;
     justify-content: center; }
   a {
-    font-size: 30px;
-    margin-left: 30px;
-    margin-right: 30px; }
-  .ofertas_row {
-    flex-direction: column; } }
+    font-size: 1.6em; } }
 
 /*------------------index-----------------*/
 header {
   background-color: #ff9800;
-  border: 1px solid white; }
+  border: 0.06em solid white; }
   header .header_nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly; }
     header .header_nav .navbar {
       padding: 0;
-      --bs-bg-opacity: 0; }
+      --bs-bg-opacity: 0;
+      display: flex !important;
+      align-items: flex-end !important; }
   header .logo_img {
-    width: 200px;
-    padding: 15px 15px 15px 30px; }
+    width: 4em;
+    padding: 0.2em; }
   header .container-fluid {
     background-color: #ff9800; }
     header .container-fluid .form_nav {
-      padding: 10px; }
+      padding: 0.6em; }
   header ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding-left: 0rem;
-    padding: 10px; }
+    padding-left: 0rem; }
     header ul .ul_nav {
       width: 100%; }
-      header ul .ul_nav .navbar {
-        --bs-bg-opacity: 0; }
+      header ul .ul_nav .nav_li {
+        width: 10.5em;
+        text-align: center; }
     header ul .a_nav:hover {
       background-color: rgba(255, 255, 255, 0.4);
       border-radius: 10px 10px 10px 10px;
       color: #ff9800; }
 
-main {
-  background-color: black;
-  padding: 30px; }
-  main .index_row {
-    width: 100%;
-    height: 100%; }
-    main .index_row .index_col {
-      width: 450px;
+.main_productos {
+  background-color: black; }
+  .main_productos .container {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; }
+    .main_productos .container .index_col {
+      width: 100%;
       height: 100%;
       display: flex;
-      flex-direction: column;
-      margin: 40px; }
-      main .index_row .index_col .card_img {
-        width: 100%;
-        height: 100%;
-        padding-top: 20px;
-        padding-bottom: 20px; }
-        main .index_row .index_col .card_img .card_imagen {
-          width: 100%;
-          height: 100%; }
-      main .index_row .index_col .card_texto {
+      flex-direction: column; }
+      .main_productos .container .index_col .card_img {
         width: 100%;
         height: 50%;
+        padding-top: 1.3em;
+        padding-bottom: 1.3em; }
+        .main_productos .container .index_col .card_img .card_imagen {
+          width: 100%;
+          height: 50%; }
+      .main_productos .container .index_col .card_texto {
         text-align: justify;
-        padding-top: 10px; }
+        padding-top: 0.9em;
+        padding-bottom: 2em; }
 
 .index_video {
-  padding: 70px 10px 70px 10px;
+  padding: 4.3em 0.6em 4.3em 0.6em;
   text-align: center;
   background-color: #ffc340; }
 
@@ -186,19 +191,20 @@ main {
   background-color: #ff9800;
   justify-content: space-evenly; }
   .footer .pago {
-    padding: 15px;
+    padding: 0.9em;
     background-color: #ff9800; }
     .footer .pago .img_footer {
-      padding-top: 10px; }
+      padding-top: 0.6em; }
       .footer .pago .img_footer:hover {
         transform: scale(1.1, 1.1); }
   .footer .container_footer {
-    padding: 15px;
+    padding: 0.9em;
     background-color: #ff9800; }
     .footer .container_footer .img_footer_redes {
-      height: 40px; }
+      height: 1.7em;
+      padding: 0.2em; }
       .footer .container_footer .img_footer_redes:hover {
-        transform: translate(-2px, -2px); }
+        transform: translate(-0.13em, -0.13em); }
 
 /*----------------ofertas-----------------*/
 .ofertas_row {
@@ -206,49 +212,49 @@ main {
   justify-content: space-evenly;
   flex-wrap: wrap;
   flex-direction: row;
-  padding: 40px; }
+  padding: 3em; }
   .ofertas_row .ofertas_col {
-    padding: 20px;
-    padding-bottom: 40px;
+    padding: 1.3em;
     text-align: center; }
     .ofertas_row .ofertas_col:hover {
-      box-shadow: 2px 2px 4px 1px #ff9800; }
+      box-shadow: 0.13em 0.13em 0.3em 0.06em #ff9800; }
     .ofertas_row .ofertas_col .img_oferta {
-      width: 300px;
-      height: 200px;
+      width: 18.7em;
+      height: 18.7em;
+      padding-bottom: 0.6em;
       transition: all 0.1s linear; }
 
 .filtrar {
   text-align: left;
-  padding: 20px;
+  padding: 1.3em;
   background-color: #ffc340; }
 
 /*---------------galeria---------------------*/
 .galeria {
   padding: 0; }
   .galeria .res {
-    padding-top: 40px;
-    padding-bottom: 50px; }
+    padding-top: 3em;
+    padding-bottom: 3em; }
     .galeria .res .res_a {
       grid-column: 2 span; }
     .galeria .res .res_e {
       grid-row: 2 span; }
   .galeria .pollo {
-    padding-top: 40px;
-    padding-bottom: 50px; }
+    padding-top: 3em;
+    padding-bottom: 3em; }
     .galeria .pollo .pollo_d {
       grid-column: 2 span; }
     .galeria .pollo .pollo_c {
       grid-row: 2 span; }
   .galeria .porcina {
-    padding-top: 40px;
-    padding-bottom: 50px; }
+    padding-top: 3em;
+    padding-bottom: 3em; }
     .galeria .porcina .porcina_g {
       grid-column: 2 span; }
     .galeria .porcina .porcina_a {
       grid-row: 2 span; }
   .galeria .pescado {
-    padding-top: 40px; }
+    padding-top: 3em; }
     .galeria .pescado .pescado_f {
       grid-column: 2 span; }
     .galeria .pescado .pescado_b {
@@ -263,7 +269,7 @@ main {
 /*-----------------ubicacion-------------------*/
 .ubicacion {
   text-align: center;
-  padding: 70px 70px 70px 70px; }
+  padding: 4.37em 4.37em 4.37em 4.37em; }
   .ubicacion .ubicacion_map {
     display: flex;
     justify-content: space-evenly;
@@ -271,28 +277,58 @@ main {
     text-align: center; }
 
 .ubicacion_video {
-  padding: 50px 10px 70px 10px;
+  padding: 3em 0.6em 4.37em 0.6em;
   text-align: center;
   background-color: #ffc340; }
 
 /*----------------contacto-------------------*/
+.main_form {
+  padding: 0.6em 0 0.6em 0; }
+  .main_form .form {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .main_form .form .nombre {
+      padding: 0.6em 0.6em 0.6em 0.6em; }
+      .main_form .form .nombre input::placeholder {
+        color: #555; }
+      .main_form .form .nombre input:focus {
+        outline: 0.1em solid #ff9800;
+        padding: 0.06em; }
+    .main_form .form .number {
+      padding: 0.6em 0.6em 0.6em 0.6em;
+      display: inline; }
+      .main_form .form .number input::placeholder {
+        color: #555; }
+      .main_form .form .number input:focus {
+        outline: 0.1em solid #ff9800;
+        padding: 0.06em; }
+    .main_form .form .label {
+      display: flex;
+      justify-content: flex-start; }
+    .main_form .form .mensaje {
+      padding: 0.6em 0.6em 0.6em 0.6em;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      justify-content: center; }
+      .main_form .form .mensaje textarea::placeholder {
+        color: #555; }
+      .main_form .form .mensaje textarea:focus {
+        outline: 0.1em solid #ff9800;
+        padding: 0.06em; }
+
+.enviar {
+  padding: 0.3em 0.3em 0.3em 0.3em;
+  border-radius: 0.3em;
+  background: #64c8ff;
+  cursor: pointer; }
+
 .contacto {
   text-align: right;
-  padding: 20px;
   background-color: #ffc340; }
-
-.contacto_form {
-  padding: 70px 70px 70px 70px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white; }
-  .contacto_form .form-check {
-    padding-top: 15px;
-    padding-bottom: 15px; }
-  .contacto_form .input_enviar {
-    display: flex;
-    justify-content: center; }

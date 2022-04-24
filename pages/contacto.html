@@ -20,11 +20,11 @@
 
     <nav class="header_nav">
       <div class="logo">
-        <img class=logo_img src="/images/logo.jpg" alt="logo de la pagina">
+        <a href="/index.html"><img class=logo_img src="/images/logo.jpg" alt="Haz clic para volver al inicio"></a>
       </div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid container_fluid">
-          <a class="navbar-brand a_nav" href="/index.html"></a>
+          
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -34,11 +34,11 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <div class="ul_nav">
                 <ul>
-                  <li> <a class="a_nav" href="/index.html">Inicio</a></li>
-                  <li> <a class="a_nav" href="/pages/ofertas.html">Ofertas</a></li>
-                  <li> <a class="a_nav" href="/pages/galeria.html">Galeria</a></li>
-                  <li> <a class="a_nav" href="/pages/ubicacion.html">Ubicacion</a></li>
-                  <li> <a class="a_nav" href="/pages/contacto.html">Contacto</a></li>
+                  <li class="nav_li"> <a class="a_nav" href="/index.html">Inicio</a></li>
+                  <li class="nav_li"> <a class="a_nav" href="/pages/ofertas.html">Ofertas</a></li>
+                  <li class="nav_li"> <a class="a_nav" href="/pages/galeria.html">Galeria</a></li>
+                  <li class="nav_li"> <a class="a_nav" href="/pages/ubicacion.html">Ubicacion</a></li>
+                  <li class="nav_li"> <a class="a_nav" href="/pages/contacto.html">Contacto</a></li>
                 </ul>
               </div>
             </ul>
@@ -58,111 +58,66 @@
 
     </nav>
 
+    </header>
 
-  </header>
+  <main class="main_form">
 
-  <main>
-
-    <section id="formulario" class="container p-3">
-
-      <form class="contacto_form fomr_paddin">
-
-        <div class="row">
-          <div class="col-12 col-md-6 mb-3">
-            <label for="nombre" class="form-label">Nombre de pila</label>
-            <input type="text" class="form-control" id="nombre" aria-describedby="nombreHelp">
-
-          </div>
-          <div class="col-12 col-md-6 mb-3">
-            <label for="Apellido" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="Apellido">
-          </div>
-
-
-          <label for="Nombre de usuario" class="form-label">Nombre de usuario</label>
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="Nombre de usuario">@</span>
-            <input type="text" class="form-control" placeholder="Nombre de usuario" aria-label="Nombre de usuario"
-              aria-describedby="basic-addon1">
-          </div>
-
-          <div class="mb-3">
-            <label for="Correo electronico" class="form-label display:inline-block">Correo electronico</label>
-            <span id="Correo electronico" class="form-text">(opcional)</span>
-            <input type="email" class="form-control" id="Correo electronico" placeholder="you@example.com">
-          </div>
-
-          <div class="mb-3">
-            <label for="Habla a" class="form-label display:inline-block">Habla a</label>
-            <input type="text" class="form-control" id="Habla a" placeholder="12334 Main St">
-          </div>
-
-          <div class="mb-3">
-            <label for="Direccion 2" class="form-label display:inline-block">Dirrección 2</label>
-            <span id="Direccion 2" class="form-text">(opcional)</span>
-            <input type="email" class="form-control" id="Direccion 2" placeholder="you@example.com">
-          </div>
-
-          <div class="col-md-4">
-            <label for="pais" class="form-label">País</label>
-            <select id="pais" class="form-select">
-              <option selected>Escoger...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class="col-md-4">
-            <label for="Estado" class="form-label">Estado</label>
-            <select id="iEstado" class="form-select">
-              <option selected>Escoger...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class="col-md-2">
-            <label for="Código Postal" class="form-label">Código Postal</label>
-            <input type="text" class="form-control" id="Código Postal">
-          </div>
-
-
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="checkdirrecion">
-            <label class="form-check-label" for="checkdirrecion">
-              la dirección de envío es la misma que mi dirección de facturación
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="Checkguardar" checked>
-            <label class="form-check-label" for="Checkguardar">
-              Guarde esta información para la próxima vez
-            </label>
-          </div>
-          <div class="input_enviar">
-            <button type="button" class="btn btn-outline-light">Enviar</button>
-          </div>
-
-
-      </form>
+    <form class="form">
+      <h1>contacto</h1>
+      <div class="nombre">
+          <input type="text" name="nombre" placeholder="NOMBRE">
+          <input type="email" name="email" placeholder="CORREO ELECTRONICO">
+      </div>
+      <div class="number">
+          <input type="number" name="number" placeholder="NUMERO DE TELEFONO">
+          <input type="text" name="codigopostal" placeholder="DIRRECION">
+      </div>
+      <label for="provincia">Provincia
+      <select name="provincia" id="provincia">
+        <option value="">---</option>
+        <option value="buenos aires">Buenos Aires</option>
+        <option value="catamarca">Catamarca</option>
+        <option value="chaco">Chaco</option>
+        <option value="chubut">Chubut</option>
+        <option value="cordoba">Córdoba</option>
+        <option value="corrientes">Corrientes</option>
+      </select>
+      <label>Masculino</label>
+      <input type="radio" name="mostar" value="1">
+      <label>Femenino</label>
+      <input type="radio" name="mostar" value="1">
+      </label>
+      <div class="mensaje">
+          <textarea name="mensaje" rows="10" cols="45" placeholder="MENSAJE"></textarea>
 
       </div>
+      <input class="enviar" type="submit" value="ENVIAR">
+
+
+  </form>
+      
+
+      
     </section>
 
   </main>
   <aside>
     <div class="contacto">
 
-      <h3>Entregas a domicilio en el día.</h3>
-      <h3>Lunes a Sabados de 10 a 20 hs.Se incluyen pedidos hasta las 19hs.</h3>
-      <h3>Avenida Siempreviva 742</h3>
+      <h4>entregas a domicilio en el día.</h4>
+      <h4>lunes a Sabados de 10 a 20 hs.Se incluyen pedidos hasta las 19hs.</h4>
+      <h4>avenida Siempreviva 742</h4>
     </div>
   </aside>
   <footer class="footer">
 
     <div class="pago">
-      <h3>Medios de pago </h3>
+      <h4>medios de pago </h4>
       <img loading="lazy" class="img_footer" src="/images/baner-de-tarjetas_1.png" alt="baner-de-tarjetas">
     </div>
 
     <div class="container_footer">
-      <h3>Redes</h3>
+      <h4>redes</h4>
       <a href="www.faceook.com"><img loading="lazy" class="img_footer_redes" src="/redes/facebook.png"
           alt="facebook"></a>
       <a href="www.instagram.com"><img loading="lazy" class="img_footer_redes" src="/redes/instagram.png"

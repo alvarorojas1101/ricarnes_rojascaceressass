@@ -1,30 +1,87 @@
 /*----------------contacto-------------------*/
 
+.main_form{
+    padding: 0.6em 0 0.6em 0;
+    .form {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .nombre {
+            padding: 0.6em 0.6em 0.6em 0.6em;
+            input::placeholder {
+                color: #555;
+            }
+            input:focus{
+                outline: 0.1em solid #ff9800;
+                padding: 0.06em;
+            }
+        } 
+        .number {
+            padding: 0.6em 0.6em 0.6em 0.6em;
+            display: inline;
+            input::placeholder {
+                color: #555;
+            }
+            input:focus{
+                outline: 0.1em solid #ff9800;
+                padding: 0.06em;
+            }
+        }
+        .label{
+            display: flex;
+            justify-content: flex-start;
+        }
+        .mensaje {
+            padding: 0.6em 0.6em 0.6em 0.6em
+            ;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            textarea::placeholder {
+                color: #555;
+            }
+            textarea:focus{
+                outline: 0.1em solid #ff9800;
+                padding: 0.06em;
+            }
+        }
+        
+    }
+}
+
+.enviar {
+    padding: 0.3em 0.3em 0.3em 0.3em;
+    border-radius: 0.3em;
+    background: rgb(100, 200, 255);
+    cursor: pointer;
+}
 .contacto {
     text-align: right;
-    padding: 20px;
     background-color: $secundary-color;
 }
 
-.contacto_form {
 
-    padding: 70px 70px 70px 70px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: $font-color;
 
-    .form-check {
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
 
-    .input_enviar {
-        display: flex;
-        justify-content: center;
-    }
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
